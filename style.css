@@ -1,0 +1,350 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: #d4eefc;
+}
+
+.wrapper .sidebar {
+  background: #f7fbfc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+}
+
+/* side bar photo and heading */
+
+.wrapper .sidebar .profile {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.wrapper .sidebar .profile h3 {
+  color: #010f0f;
+  margin: 10px 0 5px;
+}
+
+/* side bar list setting */
+.wrapper .sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  /* border-bottom: 1px solid #10558d; */
+  color: #010f0f;
+  font-size: 16px;
+  position: relative;
+}
+
+.wrapper .sidebar ul li a .icon {
+  color: black;
+  width: 30px;
+  display: inline-block;
+}
+
+/* hover on sidebar */
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active {
+  color: white;
+
+  background: black;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon {
+  color: white;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before {
+  display: block;
+}
+
+/* heading */
+h1 {
+  color: #010f0f;
+  padding-left: 250px;
+  padding-top: 60px;
+}
+
+/* searchbar  */
+.searchbar {
+  padding-left: 800px;
+  padding-right: 20px;
+}
+
+/* sidebar */
+.sidebaricon {
+  padding-left: 0px;
+}
+
+.formss {
+  width: 200px;
+  margin-left: 400px;
+}
+
+/* card  */
+
+.ag-format-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.ag-courses_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  padding: 50px 0;
+}
+.ag-courses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 60px);
+  flex-basis: calc(33.33333% - 60px);
+
+  margin: 0 30px 30px;
+
+  overflow: hidden;
+  height: 200px; /* Adjust the height as needed */
+  border-radius: 28px;
+}
+
+.ag-courses_item:before,
+.ag-courses_item:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: inherit;
+  border-radius: 28px;
+  z-index: -1;
+}
+
+.ag-courses_item:before {
+  top: 0;
+  left: 0;
+}
+
+.ag-courses_item:after {
+  top: 0;
+  right: 0;
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: whitesmoke;
+  position: relative;
+  border-radius: 28px; /* Add this line to match the card's border radius */
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: black;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 10px; /* Adjust the margin as needed */
+  display: flex;
+  align-items: center; /* Center-align the content vertically */
+  justify-content: center; /* Center-align the content horizontally */
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 30px;
+  /* color: #FFF;  */
+  color: #121212;
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date-box {
+  font-size: 18px;
+  /* color: #FFF; */
+  color: #121212;
+  display: flex;
+  align-items: center; /* Center-align the content vertically */
+  justify-content: center; /* Center-align the content horizontally */
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #f9b234;
+
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  transform: scale(
+    1
+  ); /* Add this line to maintain the border radius appearance */
+  transition: all 0.5s ease;
+}
+
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: #3ecd5e;
+}
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: #e44002;
+}
+
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+}
+
+/* bar graph indent placed */
+.graph {
+  position: absolute;
+  background: transparent;
+  padding-left: 280px; /* Adjust as needed */
+  margin-top: 20px; /* Add margin for spacing from the cards */
+  width: 750px;
+  height: 430px;
+}
+
+.chart-container {
+  background: #f7fbfc; /* White background for the chart */
+  padding: 30px 30px 30px 30px; /* Add padding to create a gap within the div */
+  border-radius: 20px; /* Optional: Add border radius for a rounded appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+/* heading of the garph  */
+h3{
+  color:#010f0f;
+  margin: 0px 0px 40px 120px;
+}
+
+
+/* bar graph  indent cancaled  */
+.graph1 {
+  position: absolute;
+  background: transparent;
+  padding-left: 850px; /* Adjust as needed */
+  margin-top: 20px; /* Add margin for spacing from the cards */
+  width: 1310px;
+  height: 433.6px;
+}
+
+.chart-container1 {
+  background: #f7fbfc; /* White background for the chart */
+  padding: 30px 30px 30px 30px; /* Add padding to create a gap within the div */
+  border-radius: 20px; /* Optional: Add border radius for a rounded appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+
+/* pie chart */
+#chart2{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 380px;
+  height: 250px;
+  position: relative;
+}
+svg {
+    width: 100%;
+    height: 100%;
+}
+path.slice {
+    stroke-width: 2px;
+}
+polyline {
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+
+.graph2 {
+  position: absolute;
+  background: transparent;
+  padding-left: 280px; /* Adjust as needed */
+  margin-top: 580px; /* Add margin for spacing from the cards */
+  width: 750px;
+  height: 430px;
+  overflow:visible;
+}
+
+.chart-container2 {
+  background: #f7fbfc; /* White background for the chart */
+  padding: 30px 30px 30px 30px; /* Add padding to create a gap within the div */
+  border-radius: 20px; /* Optional: Add border radius for a rounded appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+.chat {
+  text-align: center;
+  padding-top: 50px;
+  position: relative; /* Set to relative */
+}
+
+
+
+/* Add hover animation to the pie chart slice */
+/* .chart-container2  path:hover {
+  transform: scale(1.1);
+  transition: transform 1s ease;
+} */
+
